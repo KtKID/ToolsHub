@@ -1,0 +1,25 @@
+name: test workflow
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  start:
+    runs-on: ubuntu-latest
+    steps:
+      - name: start action
+        run: echo "I start action"
+        shell: bash
+
+  end:
+    runs-on: ubuntu-lastest
+    steps:
+      - name: end action
+        run: echo "I end action"
+        shell: bash
